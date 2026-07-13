@@ -264,54 +264,24 @@ export default function App() {
   const handlePay = async () => {
     if (!email) return;
     setPaying(true);
-    setLoadingReport(true);
-    await new Promise(r => setTimeout(r, 1200));
     try {
-      const styleData = activeQuiz.styles[primary];
-      const scoreLines = Object.entries(scores).map(([k, v]) => `${k}: ${v}/${activeQuiz.questions.length}`).join(", ");
-      const response = await fetch("https://api.anthropic.com/v1/messages", {
+      const res = await fetch("/api/create-checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          model: "claude-sonnet-4-6",
-          max_tokens: 1000,
-          messages: [{
-            role: "user",
-            content: `You are a world-class executive coach at LEANGLE HR LAB. A leader has completed the "${activeQuiz.title}" quiz.
-
-Primary result: ${primary} ("${styleData.tagline}")
-Score breakdown: ${scoreLines}
-
-Write a premium personalised leadership report with these exact sections:
-
-## Your ${activeQuiz.title} DNA
-2-3 sentences on what makes this leader distinctively effective in this area.
-
-## Where You Shine
-3 specific, vivid real-world scenarios where this style creates exceptional results.
-
-## Your Growth Edge
-2-3 honest, specific blind spots this leader likely hasn't fully recognised yet.
-
-## 30-Day Action Plan
-5 concrete weekly actions. Each must be specific and behavioural — not generic advice.
-
-## Your Leadership Mantra
-One powerful sentence they can return to under pressure.
-
-Be direct, insightful, personalised. Use "you" throughout. No filler.`
-          }]
-        })
+          email,
+          quizId: activeQuiz.id,
+          quizTitle: activeQuiz.title,
+          primaryStyle: primary,
+          scores,
+        }),
       });
-      const data = await response.json();
-      const text = data.content?.filter(b => b.type === "text").map(b => b.text).join("\n") || "";
-      setAiReport(text);
+      const { url } = await res.json();
+      window.location.href = url;
     } catch {
-      setAiReport("## Your Report\n\nWe encountered an issue generating your personalised report. Please contact support@leangle.com.");
+      alert("Payment error. Please try again.");
+      setPaying(false);
     }
-    setPaying(false);
-    setLoadingReport(false);
-    setScreen("premium");
   };
 
   const goHome = () => { setScreen("home"); window.location.hash = ""; };
