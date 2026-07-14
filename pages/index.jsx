@@ -25,7 +25,7 @@ const T = {
     unlockSub: "An AI-powered deep-dive into your leadership style — your DNA, hidden blind spots, and a personalised 30-day action plan.",
     unlockFeatures: ["📋 Full personalised leadership report","🎯 30-day action plan (week by week)","💡 Your leadership mantra","📬 Sent to your inbox instantly"],
     unlockBtn: "Get Full Report — $29",
-    unlockNote: "One-time payment · Instant access · 30-day guarantee",
+    unlockNote: "One-time payment · Instant access",
     premiumReport: "Premium Report",
     reportSent: "📬 Report sent to",
     bookmark: "Bookmark this page to revisit anytime.",
@@ -36,7 +36,7 @@ const T = {
     emailPlaceholder: "you@company.com",
     payBtn: "Pay $29 & Get My Report",
     processing: "Processing…",
-    secure: "🔒 Secure · 30-day money-back guarantee",
+    secure: "🔒 Secure checkout",
     backResults: "← Back to results",
     questions: "questions",
     primaryStyle: "Your primary style",
@@ -60,7 +60,7 @@ const T = {
     unlockSub: "Un análisis profundo de tu estilo de liderazgo generado por IA — tu ADN, puntos ciegos ocultos y un plan de acción personalizado de 30 días.",
     unlockFeatures: ["📋 Informe de liderazgo personalizado completo","🎯 Plan de acción de 30 días (semana por semana)","💡 Tu mantra de liderazgo","📬 Enviado a tu bandeja de entrada al instante"],
     unlockBtn: "Obtener Informe Completo — $29",
-    unlockNote: "Pago único · Acceso instantáneo · Garantía de 30 días",
+    unlockNote: "Pago único · Acceso instantáneo",
     premiumReport: "Informe Premium",
     reportSent: "📬 Informe enviado a",
     bookmark: "Guarda esta página para revisitarla en cualquier momento.",
@@ -71,7 +71,7 @@ const T = {
     emailPlaceholder: "tu@empresa.com",
     payBtn: "Pagar $29 y Obtener Mi Informe",
     processing: "Procesando…",
-    secure: "🔒 Seguro · Garantía de devolución de 30 días",
+    secure: "🔒 Pago seguro",
     backResults: "← Volver a resultados",
     questions: "preguntas",
     primaryStyle: "Tu estilo principal",
@@ -137,7 +137,7 @@ const QUIZZES = [
       {q:{en:"Someone gives you harsh feedback you think is unfair. You…",es:"Alguien te da una retroalimentación dura que crees injusta. Tú…"},options:[{text:{en:"Acknowledge their perspective and look for the grain of truth",es:"Reconoces su perspectiva y buscas el grano de verdad"},s:"Mediator"},{text:{en:"Respond immediately and defend your position",es:"Respondes inmediatamente y defiendes tu posición"},s:"Confronter"},{text:{en:"Process it privately before responding",es:"Lo procesas en privado antes de responder"},s:"Avoider"},{text:{en:"Ask for specific examples before forming a response",es:"Pides ejemplos específicos antes de formar una respuesta"},s:"Collaborator"}]},
       {q:{en:"The conflict has gone on too long. You…",es:"El conflicto ha durado demasiado. Tú…"},options:[{text:{en:"Propose a fresh start and ask everyone to move on",es:"Propones un nuevo comienzo y pides a todos que sigan adelante"},s:"Mediator"},{text:{en:"Force a conclusion — decide who's right and act",es:"Fuerzas una conclusión — decides quién tiene razón y actúas"},s:"Confronter"},{text:{en:"Give it more time — pressure rarely helps",es:"Das más tiempo — la presión raramente ayuda"},s:"Avoider"},{text:{en:"Restructure how the parties interact to remove the friction",es:"Reestructuras cómo interactúan las partes para eliminar la fricción"},s:"Collaborator"}]},
       {q:{en:"What do you believe about workplace conflict?",es:"¿Qué crees sobre el conflicto en el lugar de trabajo?"},options:[{text:{en:"It's mostly avoidable with better communication",es:"Es mayormente evitable con mejor comunicación"},s:"Mediator"},{text:{en:"It's healthy if handled openly and quickly",es:"Es saludable si se maneja abierta y rápidamente"},s:"Confronter"},{text:{en:"Most conflict resolves itself if given space",es:"La mayoría de los conflictos se resuelven solos si se les da espacio"},s:"Avoider"},{text:{en:"It's a symptom of a deeper systemic issue",es:"Es un síntoma de un problema sistémico más profundo"},s:"Collaborator"}]},
-      {q:{en:"After a resolved conflict, you…",es:"Después de resolver un conflicto, tú…"},options:[{text:{en:"Check in with both parties to make sure the air is clear",es:"Verificas con ambas partes que el ambiente esté despejado"},s:"Mediator"},{text:{en:"Move on — it's done, no need to revisit",es:"Sigues adelante — está hecho, no hay necesidad de revisitar"},s:"Confronter"},{text:{en:"Keep a watchful eye from a distance",es:"Mantienes un ojo vigilante desde la distancia"},s:"Avoider"},{text:{en:"Document what happened and update your team processes",es:"Documentas lo que ocurrió y actualizas los procesos del equipo"},s:"Collaborator"}]},
+      {q:{en:"After a resolved conflict, you…",es:"Después de resolver un conflicto, tú…"},options:[{text:{en:"Check in with both parties to make sure the air is clear",es:"Te aseguras de que ambas partes estén bien y el ambiente sea positivo"},s:"Mediator"},{text:{en:"Move on — it's done, no need to revisit",es:"Sigues adelante — está hecho, no hay necesidad de revisitar"},s:"Confronter"},{text:{en:"Keep a watchful eye from a distance",es:"Mantienes un ojo vigilante desde la distancia"},s:"Avoider"},{text:{en:"Document what happened and update your team processes",es:"Documentas lo que ocurrió y actualizas los procesos del equipo"},s:"Collaborator"}]},
     ],
   },
   {
@@ -147,18 +147,18 @@ const QUIZZES = [
     emoji:"🎙️",duration:"3 min",
     styles:{
       Coach:{emoji:"🌱",tagline:{en:"The Growth Guide",es:"El Guía de Crecimiento"},color:"#4A9B7F",summary:{en:"You give feedback as an investment. People leave your conversations feeling capable and seen.",es:"Das retroalimentación como una inversión. Las personas salen de tus conversaciones sintiéndose capaces y reconocidas."},strengths:{en:["Builds lasting performance improvement","Creates psychological safety","Strong at developing junior talent"],es:["Construye mejora de rendimiento duradera","Crea seguridad psicológica","Fuerte en desarrollar talento junior"]},blindspots:{en:["May soften feedback until the message is lost","Can feel slow when urgency is needed","Risk of over-praising mediocre work"],es:["Puede suavizar tanto la retroalimentación que el mensaje se pierda","Puede sentirse lento cuando se necesita urgencia","Riesgo de elogiar en exceso el trabajo mediocre"]}},
-      Challenger:{emoji:"💪",tagline:{en:"The Straight Talker",es:"El Hablador Directo"},color:"#C0622F",summary:{en:"You believe in direct, honest feedback. People know exactly where they stand with you.",es:"Crees en la retroalimentación directa y honesta. Las personas saben exactamente dónde están contigo."},strengths:{en:["Clear, actionable and memorable","No guessing required","Drives rapid improvement in confident people"],es:["Clara, accionable y memorable","No hay necesidad de adivinar","Impulsa la mejora rápida en personas seguras"]},blindspots:{en:["Can damage confidence in sensitive individuals","May miss emotional context","Risk of feedback feeling like criticism"],es:["Puede dañar la confianza en individuos sensibles","Puede perderse el contexto emocional","Riesgo de que la retroalimentación se sienta como crítica"]}},
+      Challenger:{emoji:"💪",tagline:{en:"The Straight Talker",es:"El Hablador Directo"},color:"#C0622F",summary:{en:"You believe in direct, honest feedback. People know exactly where they stand with you.",es:"Crees en la retroalimentación directa y honesta. Las personas saben exactamente dónde están contigo."},strengths:{en:["Clear, actionable and memorable","No guessing required","Drives rapid improvement in confident people"],es:["Clara, con pasos concretos y memorable","No hay necesidad de adivinar","Impulsa la mejora rápida en personas seguras"]},blindspots:{en:["Can damage confidence in sensitive individuals","May miss emotional context","Risk of feedback feeling like criticism"],es:["Puede dañar la confianza en individuos sensibles","Puede perderse el contexto emocional","Riesgo de que la retroalimentación se sienta como crítica"]}},
       Connector:{emoji:"🤝",tagline:{en:"The Relationship Feeder",es:"El Cultivador de Relaciones"},color:"#4A7FA5",summary:{en:"You tailor your feedback to the individual. You read the room and ensure the person feels safe enough to hear you.",es:"Adaptas tu retroalimentación al individuo. Lees el ambiente y aseguras que la persona se sienta segura para escucharte."},strengths:{en:["Highly personalised and trusted","Excellent retention of top performers","Creates deep loyalty"],es:["Altamente personalizada y de confianza","Excelente retención de alto rendimiento","Crea lealtad profunda"]},blindspots:{en:["Consistency can be a challenge across the team","May avoid hard truths to protect the relationship","Risk of perceived favouritism"],es:["La consistencia puede ser un desafío en el equipo","Puede evitar verdades difíciles para proteger la relación","Riesgo de favoritismo percibido"]}},
       Analyst:{emoji:"📐",tagline:{en:"The Evidence Builder",es:"El Constructor de Evidencias"},color:"#7B6FA5",summary:{en:"You come to feedback conversations prepared with data, examples, and structured observations.",es:"Llegas a las conversaciones de retroalimentación preparado con datos, ejemplos y observaciones estructuradas."},strengths:{en:["Objective and hard to dismiss","Clear on what 'better' looks like","Creates measurable improvement plans"],es:["Objetivo y difícil de desestimar","Claro sobre cómo se ve 'mejor'","Crea planes de mejora medibles"]},blindspots:{en:["Can feel clinical or impersonal","May miss the emotional dimension","Risk of overwhelming with data"],es:["Puede sentirse clínico o impersonal","Puede perderse la dimensión emocional","Riesgo de abrumar con datos"]}},
     },
     questions:[
-      {q:{en:"Before a feedback conversation, you…",es:"Antes de una conversación de retroalimentación, tú…"},options:[{text:{en:"Think about what will motivate this person to grow",es:"Piensas en qué motivará a esta persona a crecer"},s:"Coach"},{text:{en:"Plan exactly what you need to say and keep it tight",es:"Planificas exactamente qué debes decir y lo mantienes conciso"},s:"Challenger"},{text:{en:"Consider their current state and how to meet them there",es:"Consideras su estado actual y cómo llegar a ellos ahí"},s:"Connector"},{text:{en:"Gather examples, notes and context to back your points",es:"Reúnes ejemplos, notas y contexto para respaldar tus puntos"},s:"Analyst"}]},
+      {q:{en:"Before a feedback conversation, you…",es:"Antes de una conversación de retroalimentación, tú…"},options:[{text:{en:"Think about what will motivate this person to grow",es:"Piensas en qué motivará a esta persona a crecer"},s:"Coach"},{text:{en:"Plan exactly what you need to say and keep it tight",es:"Planificas exactamente qué debes decir y lo mantienes conciso"},s:"Challenger"},{text:{en:"Consider their current state and how to meet them there",es:"Piensas en su estado emocional y cómo acercarte a ellos"},s:"Connector"},{text:{en:"Gather examples, notes and context to back your points",es:"Reúnes ejemplos, notas y contexto para respaldar tus puntos"},s:"Analyst"}]},
       {q:{en:"You open a feedback conversation by…",es:"Abres una conversación de retroalimentación…"},options:[{text:{en:"Asking what they feel went well first",es:"Preguntando primero qué creen que salió bien"},s:"Coach"},{text:{en:"Going straight to the point",es:"Yendo directamente al punto"},s:"Challenger"},{text:{en:"Checking in on how they're feeling about their performance",es:"Verificando cómo se sienten respecto a su rendimiento"},s:"Connector"},{text:{en:"Setting context with the data you've gathered",es:"Estableciendo contexto con los datos que has reunido"},s:"Analyst"}]},
       {q:{en:"Someone pushes back on your feedback. You…",es:"Alguien rechaza tu retroalimentación. Tú…"},options:[{text:{en:"Explore their perspective — they may have a point",es:"Explotas su perspectiva — pueden tener razón"},s:"Coach"},{text:{en:"Hold your position if you believe you're right",es:"Mantienes tu posición si crees que tienes razón"},s:"Challenger"},{text:{en:"Back off if it protects the relationship",es:"Cedes si eso protege la relación"},s:"Connector"},{text:{en:"Go back to your evidence and walk through it calmly",es:"Vuelves a tu evidencia y la repasas con calma"},s:"Analyst"}]},
-      {q:{en:"Your feedback lands badly and they shut down. You…",es:"Tu retroalimentación cae mal y se cierran. Tú…"},options:[{text:{en:"Pause, reassure them, and reframe with encouragement",es:"Pausas, los tranquilizas y reformulas con aliento"},s:"Coach"},{text:{en:"Give them space — they'll process it in their own time",es:"Les das espacio — lo procesarán a su tiempo"},s:"Challenger"},{text:{en:"Drop everything and focus on rebuilding the connection",es:"Dejas todo y te enfocas en reconstruir la conexión"},s:"Connector"},{text:{en:"Ask clarifying questions to understand where it went wrong",es:"Haces preguntas aclaratorias para entender dónde salió mal"},s:"Analyst"}]},
-      {q:{en:"When receiving feedback yourself, you prefer…",es:"Cuando recibes retroalimentación, prefieres…"},options:[{text:{en:"A coaching conversation that helps you identify your own gaps",es:"Una conversación de coaching que te ayude a identificar tus propias brechas"},s:"Coach"},{text:{en:"Blunt, specific, no frills",es:"Directo, específico, sin adornos"},s:"Challenger"},{text:{en:"Feedback from someone who knows and trusts you",es:"Retroalimentación de alguien que te conoce y confía en ti"},s:"Connector"},{text:{en:"Structured input with clear examples and evidence",es:"Aportaciones estructuradas con ejemplos claros y evidencia"},s:"Analyst"}]},
-      {q:{en:"After giving feedback, you…",es:"Después de dar retroalimentación, tú…"},options:[{text:{en:"Follow up to see how they're implementing the suggestions",es:"Haces seguimiento para ver cómo están implementando las sugerencias"},s:"Coach"},{text:{en:"Let them get on with it — the ball is in their court",es:"Los dejas seguir — la pelota está en su cancha"},s:"Challenger"},{text:{en:"Check in to make sure the relationship feels intact",es:"Verificas que la relación se sienta intacta"},s:"Connector"},{text:{en:"Track whether their performance improves measurably",es:"Haces seguimiento de si su rendimiento mejora mediblemente"},s:"Analyst"}]},
-      {q:{en:"What do you believe makes feedback effective?",es:"¿Qué crees que hace efectiva la retroalimentación?"},options:[{text:{en:"It helps someone believe in their own potential",es:"Ayuda a alguien a creer en su propio potencial"},s:"Coach"},{text:{en:"It's honest, even when uncomfortable",es:"Es honesta, incluso cuando es incómoda"},s:"Challenger"},{text:{en:"It's delivered by someone the recipient trusts",es:"La entrega alguien en quien el receptor confía"},s:"Connector"},{text:{en:"It's specific, evidence-based and actionable",es:"Es específica, basada en evidencia y accionable"},s:"Analyst"}]},
+      {q:{en:"Your feedback lands badly and they shut down. You…",es:"Tu retroalimentación cae mal y se cierran. Tú…"},options:[{text:{en:"Pause, reassure them, and reframe with encouragement",es:"Pausas, los tranquilizas y los animas y retomas la conversación de manera positiva"},s:"Coach"},{text:{en:"Give them space — they'll process it in their own time",es:"Les das espacio — lo procesarán a su tiempo"},s:"Challenger"},{text:{en:"Drop everything and focus on rebuilding the connection",es:"Dejas todo y te enfocas en reconstruir la conexión"},s:"Connector"},{text:{en:"Ask clarifying questions to understand where it went wrong",es:"Haces preguntas aclaratorias para entender dónde salió mal"},s:"Analyst"}]},
+      {q:{en:"When receiving feedback yourself, you prefer…",es:"Cuando recibes retroalimentación, prefieres…"},options:[{text:{en:"A coaching conversation that helps you identify your own gaps",es:"Una conversación de coaching que te ayude a identificar tus propias brechas"},s:"Coach"},{text:{en:"Blunt, specific, no frills",es:"Directo, específico y sin rodeos"},s:"Challenger"},{text:{en:"Feedback from someone who knows and trusts you",es:"Retroalimentación de alguien que te conoce y confía en ti"},s:"Connector"},{text:{en:"Structured input with clear examples and evidence",es:"Aportaciones estructuradas con ejemplos claros y evidencia"},s:"Analyst"}]},
+      {q:{en:"After giving feedback, you…",es:"Después de dar retroalimentación, tú…"},options:[{text:{en:"Follow up to see how they're implementing the suggestions",es:"Das seguimiento para ver cómo están aplicando las sugerencias"},s:"Coach"},{text:{en:"Let them get on with it — the ball is in their court",es:"Los dejas seguir — la pelota está en su cancha"},s:"Challenger"},{text:{en:"Check in to make sure the relationship feels intact",es:"Verificas que la relación se sienta intacta"},s:"Connector"},{text:{en:"Track whether their performance improves measurably",es:"Das seguimiento al avance y mides si hay mejora real"},s:"Analyst"}]},
+      {q:{en:"What do you believe makes feedback effective?",es:"¿Qué crees que hace efectiva la retroalimentación?"},options:[{text:{en:"It helps someone believe in their own potential",es:"Ayuda a alguien a creer en su propio potencial"},s:"Coach"},{text:{en:"It's honest, even when uncomfortable",es:"Es honesta, incluso cuando es incómoda"},s:"Challenger"},{text:{en:"It's delivered by someone the recipient trusts",es:"La entrega alguien en quien el receptor confía"},s:"Connector"},{text:{en:"It's specific, evidence-based and actionable",es:"Es específica, basada en evidencia y fácil de aplicar"},s:"Analyst"}]},
       {q:{en:"When someone on your team is underperforming, you…",es:"Cuando alguien de tu equipo tiene bajo rendimiento, tú…"},options:[{text:{en:"Invest time in understanding what's blocking them",es:"Inviertes tiempo en entender qué los está bloqueando"},s:"Coach"},{text:{en:"Have a frank conversation about the gap immediately",es:"Tienes una conversación franca sobre la brecha de inmediato"},s:"Challenger"},{text:{en:"Approach carefully to protect their confidence",es:"Te acercas con cuidado para proteger su confianza"},s:"Connector"},{text:{en:"Build a performance improvement plan with clear metrics",es:"Construyes un plan de mejora de rendimiento con métricas claras"},s:"Analyst"}]},
     ],
   },
@@ -213,19 +213,19 @@ const QUIZZES = [
     emoji:"🌡️",duration:"3 min",
     styles:{
       Fighter:{emoji:"🔥",tagline:{en:"The Pressure Activator",es:"El Activador de Presión"},color:"#C0622F",summary:{en:"Stress activates you. When pressure builds, you push harder and move faster. You perform under fire.",es:"El estrés te activa. Cuando la presión aumenta, empujas más fuerte y te mueves más rápido. Rindes bajo presión."},strengths:{en:["High output under pressure","Natural crisis leader","Drives urgency in the team"],es:["Alto rendimiento bajo presión","Líder natural en crisis","Impulsa la urgencia en el equipo"]},blindspots:{en:["Can be perceived as aggressive","Team may disengage under your pressure","Risk of burning bridges in the heat of the moment"],es:["Puede percibirse como agresivo","El equipo puede desconectarse bajo tu presión","Riesgo de quemar puentes en el calor del momento"]}},
-      Fixer:{emoji:"🔧",tagline:{en:"The Problem Eliminator",es:"El Eliminador de Problemas"},color:"#4A7FA5",summary:{en:"When stress arrives, you go into action mode. You identify what's broken and fix it.",es:"Cuando llega el estrés, entras en modo acción. Identificas qué está roto y lo arreglas."},strengths:{en:["Fast and resourceful under pressure","Gives the team direction","Productive stress response"],es:["Rápido y recursivo bajo presión","Da dirección al equipo","Respuesta productiva al estrés"]},blindspots:{en:["May fix symptoms rather than causes","Can exhaust yourself solving everyone else's problems","Risk of skipping the emotional dimension"],es:["Puede arreglar síntomas en lugar de causas","Puede agotarse resolviendo los problemas de todos","Riesgo de saltarse la dimensión emocional"]}},
+      Fixer:{emoji:"🔧",tagline:{en:"The Problem Eliminator",es:"El Eliminador de Problemas"},color:"#4A7FA5",summary:{en:"When stress arrives, you go into action mode. You identify what's broken and fix it.",es:"Cuando llega el estrés, entras en modo acción. Identificas qué está roto y lo arreglas."},strengths:{en:["Fast and resourceful under pressure","Gives the team direction","Productive stress response"],es:["Rápido y resolutivo bajo presión","Da dirección al equipo","Respuesta productiva al estrés"]},blindspots:{en:["May fix symptoms rather than causes","Can exhaust yourself solving everyone else's problems","Risk of skipping the emotional dimension"],es:["Puede arreglar síntomas en lugar de causas","Puede agotarse resolviendo los problemas de todos","Riesgo de saltarse la dimensión emocional"]}},
       Freezer:{emoji:"❄️",tagline:{en:"The Thoughtful Pauser",es:"El Pausador Reflexivo"},color:"#7B6FA5",summary:{en:"Under stress, you go quiet. You need to process before responding — your best thinking happens after.",es:"Bajo estrés, te quedas callado. Necesitas procesar antes de responder — tu mejor pensamiento ocurre después."},strengths:{en:["Avoids reactive, costly decisions","Calm presence in chaotic moments","Deeply considered responses"],es:["Evita decisiones reactivas y costosas","Presencia tranquila en momentos caóticos","Respuestas profundamente consideradas"]},blindspots:{en:["Can appear disengaged or passive","Team may need direction you're not yet giving","Risk of missing the window to act"],es:["Puede parecer desconectado o pasivo","El equipo puede necesitar dirección que aún no estás dando","Riesgo de perder la ventana para actuar"]}},
       Connector:{emoji:"🤝",tagline:{en:"The Support Seeker",es:"El Buscador de Apoyo"},color:"#4A9B7F",summary:{en:"When stress builds, you reach for your people. You process out loud and co-regulate with others.",es:"Cuando el estrés aumenta, buscas a tu gente. Procesas en voz alta y te co-regulas con otros."},strengths:{en:["Builds team cohesion under pressure","Emotionally intelligent in crises","Prevents siloed stress responses"],es:["Construye cohesión del equipo bajo presión","Emocionalmente inteligente en crisis","Previene respuestas de estrés aisladas"]},blindspots:{en:["May over-share stress and amplify team anxiety","Can struggle to act without social validation","Risk of becoming dependent on others to self-regulate"],es:["Puede compartir demasiado el estrés y amplificar la ansiedad del equipo","Puede tener dificultades para actuar sin validación social","Riesgo de depender de otros para autorregularse"]}},
     },
     questions:[
       {q:{en:"When a crisis hits at work, your first instinct is to…",es:"Cuando llega una crisis al trabajo, tu primer instinto es…"},options:[{text:{en:"Take charge — you'll figure it out as you go",es:"Tomar el control — lo resolverás sobre la marcha"},s:"Fighter"},{text:{en:"Identify what's broken and start fixing it",es:"Identificar qué está roto y empezar a arreglarlo"},s:"Fixer"},{text:{en:"Take a breath and assess before doing anything",es:"Respirar y evaluar antes de hacer cualquier cosa"},s:"Freezer"},{text:{en:"Call someone you trust to think it through",es:"Llamar a alguien de confianza para pensarlo juntos"},s:"Connector"}]},
-      {q:{en:"Under high pressure, your team would describe you as…",es:"Bajo alta presión, tu equipo te describiría como…"},options:[{text:{en:"Intense, urgent, and driving hard",es:"Intenso, urgente y empujando fuerte"},s:"Fighter"},{text:{en:"Practical, resourceful, and action-oriented",es:"Práctico, recursivo y orientado a la acción"},s:"Fixer"},{text:{en:"Quiet, measured, and hard to read",es:"Callado, mesurado y difícil de leer"},s:"Freezer"},{text:{en:"Supportive, communicative, and bringing people together",es:"Solidario, comunicativo y uniendo a las personas"},s:"Connector"}]},
+      {q:{en:"Under high pressure, your team would describe you as…",es:"Bajo alta presión, tu equipo te describiría como…"},options:[{text:{en:"Intense, urgent, and driving hard",es:"Intenso, urgente y empujando fuerte"},s:"Fighter"},{text:{en:"Practical, resourceful, and action-oriented",es:"Práctico, resolutivo y orientado a la acción"},s:"Fixer"},{text:{en:"Quiet, measured, and hard to read",es:"Callado, mesurado y difícil de leer"},s:"Freezer"},{text:{en:"Supportive, communicative, and bringing people together",es:"Solidario, comunicativo y uniendo a las personas"},s:"Connector"}]},
       {q:{en:"When you're overwhelmed, the behaviour you most regret is…",es:"Cuando estás abrumado, el comportamiento que más lamentas es…"},options:[{text:{en:"Snapping at people or speaking too bluntly",es:"Responder bruscamente o hablar demasiado directamente"},s:"Fighter"},{text:{en:"Taking on too much and not asking for help",es:"Asumir demasiado y no pedir ayuda"},s:"Fixer"},{text:{en:"Going silent when people need direction from you",es:"Quedarte en silencio cuando las personas necesitan dirección tuya"},s:"Freezer"},{text:{en:"Leaning on others too much and spreading your anxiety",es:"Apoyarte demasiado en otros y difundir tu ansiedad"},s:"Connector"}]},
       {q:{en:"The best way to support you under stress is to…",es:"La mejor manera de apoyarte bajo estrés es…"},options:[{text:{en:"Give you space to lead your way through it",es:"Darte espacio para liderar a tu manera"},s:"Fighter"},{text:{en:"Give you a clear problem to solve",es:"Darte un problema claro que resolver"},s:"Fixer"},{text:{en:"Give you time to think before expecting a response",es:"Darte tiempo para pensar antes de esperar una respuesta"},s:"Freezer"},{text:{en:"Check in, listen, and work through it together",es:"Verificar, escuchar y trabajarlo juntos"},s:"Connector"}]},
       {q:{en:"After a stressful period at work, you recover by…",es:"Después de un período estresante en el trabajo, te recuperas…"},options:[{text:{en:"Getting straight back into action — rest feels like losing",es:"Volviendo directamente a la acción — el descanso se siente como perder"},s:"Fighter"},{text:{en:"Ticking off your to-do list and clearing the backlog",es:"Tachando tu lista de tareas y limpiando el trabajo pendiente"},s:"Fixer"},{text:{en:"Withdrawing and having quiet, undemanding time",es:"Retirándote y teniendo tiempo tranquilo y sin exigencias"},s:"Freezer"},{text:{en:"Talking it through with people you trust",es:"Hablándolo con personas de confianza"},s:"Connector"}]},
-      {q:{en:"When stress is building before a big deadline, you…",es:"Cuando el estrés aumenta antes de un plazo importante, tú…"},options:[{text:{en:"Push harder and set a relentless pace",es:"Empujas más fuerte y estableces un ritmo implacable"},s:"Fighter"},{text:{en:"Break down every task and work the list",es:"Desglosás cada tarea y trabajas la lista"},s:"Fixer"},{text:{en:"Slow down internally even if you keep moving externally",es:"Te desacelerás internamente aunque sigas moviéndote externamente"},s:"Freezer"},{text:{en:"Rally the team for a collective push",es:"Convocas al equipo para un empuje colectivo"},s:"Connector"}]},
+      {q:{en:"When stress is building before a big deadline, you…",es:"Cuando el estrés aumenta antes de un plazo importante, tú…"},options:[{text:{en:"Push harder and set a relentless pace",es:"Empujas más fuerte y estableces un ritmo implacable"},s:"Fighter"},{text:{en:"Break down every task and work the list",es:"Divides cada tarea y trabajas la lista paso a paso"},s:"Fixer"},{text:{en:"Slow down internally even if you keep moving externally",es:"Reduces el ritmo interno aunque sigas actuando por fuera"},s:"Freezer"},{text:{en:"Rally the team for a collective push",es:"Convocas al equipo para un empuje colectivo"},s:"Connector"}]},
       {q:{en:"Your stress usually comes from…",es:"Tu estrés generalmente proviene de…"},options:[{text:{en:"Losing control or being blocked from acting",es:"Perder el control o ser bloqueado para actuar"},s:"Fighter"},{text:{en:"Problems that don't have clear solutions",es:"Problemas que no tienen soluciones claras"},s:"Fixer"},{text:{en:"Too many demands with no space to think",es:"Demasiadas demandas sin espacio para pensar"},s:"Freezer"},{text:{en:"Feeling isolated or disconnected from your team",es:"Sentirte aislado o desconectado de tu equipo"},s:"Connector"}]},
-      {q:{en:"At your best under pressure, you are…",es:"En tu mejor momento bajo presión, eres…"},options:[{text:{en:"Unstoppable — pressure is your superpower",es:"Imparable — la presión es tu superpoder"},s:"Fighter"},{text:{en:"Resourceful — you always find a way",es:"Recursivo — siempre encuentras una manera"},s:"Fixer"},{text:{en:"Measured — you make the clearest calls in the room",es:"Mesurado — tomas las decisiones más claras en la sala"},s:"Freezer"},{text:{en:"Galvanising — you bring the team together when it counts",es:"Galvanizador — unes al equipo cuando más importa"},s:"Connector"}]},
+      {q:{en:"At your best under pressure, you are…",es:"En tu mejor momento bajo presión, eres…"},options:[{text:{en:"Unstoppable — pressure is your superpower",es:"Imparable — la presión es tu superpoder"},s:"Fighter"},{text:{en:"Resourceful — you always find a way",es:"Resolutivo — siempre encuentras una manera"},s:"Fixer"},{text:{en:"Measured — you make the clearest calls in the room",es:"Mesurado — tomas las decisiones más claras en la sala"},s:"Freezer"},{text:{en:"Galvanising — you bring the team together when it counts",es:"Galvanizador — unes al equipo cuando más importa"},s:"Connector"}]},
     ],
   },
 ];
@@ -239,9 +239,9 @@ function Logo({ size=1 }) {
     <div style={{textAlign:"center",userSelect:"none"}}>
       <div style={{fontSize:22*size,fontWeight:300,letterSpacing:8*size,color:B.white,fontFamily:"Georgia,serif",lineHeight:1.1}}>LEANGLE</div>
       <div style={{display:"flex",alignItems:"center",justifyContent:"center",gap:8*size,marginTop:2*size}}>
-        <div style={{height:1,width:28*size,background:B.gold}}/>
-        <div style={{fontSize:10*size,letterSpacing:5*size,color:B.silver,fontFamily:"system-ui"}}>HR LAB</div>
-        <div style={{height:1,width:28*size,background:B.gold}}/>
+        <div style={{height:1,width:28*size,background:"#4A7FA5"}}/>
+        <div style={{fontSize:10*size,letterSpacing:5*size,color:"#4A7FA5",fontFamily:"system-ui",fontWeight:600}}>HR LAB</div>
+        <div style={{height:1,width:28*size,background:"#4A7FA5"}}/>
       </div>
     </div>
   );
@@ -250,7 +250,7 @@ function Logo({ size=1 }) {
 function LoadingDots() {
   return (
     <div style={{display:"flex",gap:6,justifyContent:"center",padding:"8px 0"}}>
-      {[0,1,2].map(i=><div key={i} style={{width:8,height:8,borderRadius:"50%",background:B.gold,animation:"bounce 1.2s infinite",animationDelay:`${i*0.2}s`}}/>)}
+      {[0,1,2].map(i=><div key={i} style={{width:8,height:8,borderRadius:"50%",background:"#4A7FA5",animation:"bounce 1.2s infinite",animationDelay:`${i*0.2}s`}}/>)}
       <style>{`@keyframes bounce{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-8px)}}`}</style>
     </div>
   );
@@ -357,7 +357,7 @@ export default function App() {
       </div>
       <div style={{padding:"48px 24px 32px",textAlign:"center",maxWidth:620,margin:"0 auto"}}>
         <div style={{display:"inline-block",background:`${B.gold}22`,border:`1px solid ${B.gold}55`,borderRadius:99,padding:"6px 18px",marginBottom:20}}>
-          <span style={{fontSize:11,color:B.gold,letterSpacing:3,fontFamily:"system-ui",fontWeight:600}}>{tx.tagline}</span>
+          <span style={{fontSize:11,color:"#4A7FA5",letterSpacing:3,fontFamily:"system-ui",fontWeight:600}}>{tx.tagline}</span>
         </div>
         <h1 style={{color:B.white,fontSize:30,fontWeight:400,lineHeight:1.3,marginBottom:14,letterSpacing:0.5}}>{tx.hero}</h1>
         <p style={{color:B.silver,fontSize:15,lineHeight:1.7,fontFamily:"system-ui"}}>{tx.heroSub}</p>
@@ -373,7 +373,7 @@ export default function App() {
             <p style={{color:B.muted,fontSize:12,fontFamily:"system-ui",lineHeight:1.5,marginBottom:14}}>{t(quiz.subtitle,lang)}</p>
             <div style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
               <span style={{fontSize:11,color:B.gold,fontFamily:"system-ui"}}>⏱ {quiz.duration} · {quiz.questions.length} {tx.questions}</span>
-              <span style={{fontSize:12,color:B.gold,fontFamily:"system-ui",fontWeight:600}}>{lang==="en"?"Start →":"Comenzar →"}</span>
+              <span style={{fontSize:12,color:"#4A7FA5",fontFamily:"system-ui",fontWeight:600}}>{lang==="en"?"Start →":"Comenzar →"}</span>
             </div>
           </div>
         ))}
@@ -400,7 +400,7 @@ export default function App() {
           </div>
         </div>
         <div style={{height:3,background:B.border}}>
-          <div style={{height:"100%",background:B.gold,width:`${progress}%`,transition:"width 0.4s ease"}}/>
+          <div style={{height:"100%",background:"#4A7FA5",width:`${progress}%`,transition:"width 0.4s ease"}}/>
         </div>
         <div style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",padding:20,overflowY:"auto"}}>
           <div style={{maxWidth:520,width:"100%"}}>
@@ -412,16 +412,16 @@ export default function App() {
               {q.options.map((opt,i)=>(
                 <button key={i} onClick={()=>setSelected(opt.s)} style={{
                   textAlign:"left",padding:"13px 16px",borderRadius:9,cursor:"pointer",fontSize:14,lineHeight:1.5,fontFamily:"system-ui",
-                  border:selected===opt.s?`2px solid ${B.gold}`:`2px solid ${B.border}`,
-                  background:selected===opt.s?`${B.gold}18`:B.navyL,
+                  border:selected===opt.s?`2px solid #4A7FA5`:`2px solid ${B.border}`,
+                  background:selected===opt.s?`#4A7FA5${"28"}`:B.navyL,
                   color:selected===opt.s?B.white:B.silver,transition:"all 0.15s",
                 }}>{t(opt.text,lang)}</button>
               ))}
             </div>
             <button onClick={handleNext} disabled={!selected} style={{
               marginTop:18,width:"100%",padding:"13px",borderRadius:9,border:"none",fontSize:15,fontWeight:600,
-              cursor:selected?"pointer":"not-allowed",background:selected?B.gold:B.border,
-              color:selected?B.navyD:B.muted,transition:"all 0.2s",fontFamily:"system-ui",
+              cursor:selected?"pointer":"not-allowed",background:selected?"#4A7FA5":B.border,
+              color:selected?B.white:B.muted,transition:"all 0.2s",fontFamily:"system-ui",
             }}>
               {qIndex+1===activeQuiz.questions.length ? tx.seeResults : tx.next}
             </button>
@@ -458,7 +458,7 @@ export default function App() {
         <div style={{maxWidth:540,margin:"0 auto",padding:"20px 16px 60px"}}>
           <div style={{background:B.navyL,border:`1px solid ${B.gold}55`,borderRadius:18,padding:"28px 22px",marginBottom:14,textAlign:"center"}}>
             <div style={{fontSize:44,marginBottom:8}}>{sd.emoji}</div>
-            <div style={{fontSize:10,color:B.gold,letterSpacing:3,textTransform:"uppercase",marginBottom:6,fontFamily:"system-ui"}}>{tx.primaryStyle}</div>
+            <div style={{fontSize:10,color:"#4A7FA5",letterSpacing:3,textTransform:"uppercase",marginBottom:6,fontFamily:"system-ui"}}>{tx.primaryStyle}</div>
             <h1 style={{color:B.white,fontSize:24,fontWeight:400,fontFamily:"Georgia,serif",marginBottom:4,letterSpacing:0.5}}>{primary}</h1>
             <div style={{color:B.silver,fontSize:13,fontStyle:"italic",marginBottom:14}}>"{t(sd.tagline,lang)}"</div>
             <p style={{color:B.silver,fontSize:14,lineHeight:1.7}}>{t(sd.summary,lang)}</p>
@@ -479,14 +479,14 @@ export default function App() {
               {t(sd.blindspots,lang).map((b,i)=><p key={i} style={{fontSize:12,color:B.silver,marginBottom:5,lineHeight:1.5}}>· {b}</p>)}
             </div>
           </div>
-          <div style={{background:`linear-gradient(135deg,${B.navyL},#1A2535)`,border:`1px solid ${B.gold}55`,borderRadius:18,padding:"24px 22px",textAlign:"center"}}>
+          <div style={{background:`linear-gradient(135deg,${B.navyL},#1A2535)`,border:`1px solid #4A7FA555`,borderRadius:18,padding:"24px 22px",textAlign:"center"}}>
             <div style={{fontSize:26,marginBottom:8}}>🔓</div>
             <h3 style={{color:B.white,fontSize:17,fontWeight:400,fontFamily:"Georgia,serif",marginBottom:8,letterSpacing:0.3}}>{tx.unlockTitle}</h3>
             <p style={{color:B.silver,fontSize:13,lineHeight:1.7,marginBottom:16}}>{tx.unlockSub}</p>
             <div style={{display:"flex",flexDirection:"column",gap:5,marginBottom:18,textAlign:"left"}}>
               {tx.unlockFeatures.map(f=><div key={f} style={{color:B.silver,fontSize:13}}>✓ {f}</div>)}
             </div>
-            <button onClick={()=>setScreen("paywall")} style={{width:"100%",padding:"14px",borderRadius:9,border:"none",background:B.gold,color:B.navyD,fontSize:15,fontWeight:700,cursor:"pointer",letterSpacing:0.5,fontFamily:"system-ui"}}>
+            <button onClick={()=>setScreen("paywall")} style={{width:"100%",padding:"14px",borderRadius:9,border:"none",background:"#4A7FA5",color:B.white,fontSize:15,fontWeight:700,cursor:"pointer",letterSpacing:0.5,fontFamily:"system-ui"}}>
               {tx.unlockBtn}
             </button>
             <p style={{color:B.muted,fontSize:11,marginTop:8,fontFamily:"system-ui"}}>{tx.unlockNote}</p>
@@ -527,8 +527,8 @@ export default function App() {
         <button onClick={handlePay} disabled={paying||!email} style={{
           width:"100%",padding:"14px",borderRadius:9,border:"none",fontSize:15,fontWeight:700,
           cursor:paying||!email?"not-allowed":"pointer",
-          background:paying||!email?B.border:B.gold,
-          color:paying||!email?B.muted:B.navyD,transition:"all 0.2s",
+          background:paying||!email?B.border:"#4A7FA5",
+          color:paying||!email?B.muted:B.white,transition:"all 0.2s",
         }}>
           {paying ? tx.processing : tx.payBtn}
         </button>
