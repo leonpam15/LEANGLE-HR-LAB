@@ -1,0 +1,37 @@
+// pages/api/resend-report.js
+// Regenerates and resends a report to a customer on request.
+
+import { generateReport } from '../../lib/report';
+import { sendReportEmail } from '../../lib/email';
+
+const QUIZ_TITLES = {
+  communication: { en: "Leadership Communication Style", es: "Estilo de Comunicación de Liderazgo" },
+  conflict:      { en: "Conflict Resolution Style",      es: "Estilo de Resolución de Conflictos" },
+  feedback:      { en: "Feedback Style",                 es: "Estilo de Retroalimentación" },
+  decision:      { en: "Decision-Making Style",          es: "Estilo de Toma de Decisiones" },
+  motivation:    { en: "What Motivates You at Work",     es: "Qué Te Motiva en el Trabajo" },
+  stress:        { en: "Workplace Stress Response",      es: "Respuesta al Estrés Laboral" },
+};
+
+export default async function handler(req, res) {
+  if (req.method !== 'POST') return res.status(405).end();
+
+  const { email, quizId, primaryStyle, lang = 'en' } = req.body;
+
+  if (!email || !quizId || !primaryStyle) {
+    return res.status(400).json({ error: 'Missing required fields' });
+  }
+
+  try {
+    const quizTitleObj = QUIZ_TITLES[quizId];
+    const quizTitle = quizTitleObj ? (quizTitleObj[lang] || quizTitleObj.en) : quizId;
+
+    const report = await generateReport(quizTitle, primaryStyle, {}, lang);
+    await sendReportEmail(email, quizTitle, primaryStyle, report);
+
+    return res.status(200).json({ success: true });
+  } catch (err) {
+    console.error('Resend report error:', err.message);
+    return res.status(500).json({ error: 'Failed to generate or send report' });
+  }
+}
