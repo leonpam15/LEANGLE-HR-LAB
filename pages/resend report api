@@ -1,8 +1,8 @@
 // pages/api/resend-report.js
 // Regenerates and resends a report to a customer on request.
 
-import { generateReport } from '../../lib/report';
-import { sendReportEmail } from '../../lib/email';
+import { generateReport } from '../lib/report';
+import { sendReportEmail } from '../lib/email';
 
 const QUIZ_TITLES = {
   communication: { en: "Leadership Communication Style", es: "Estilo de Comunicación de Liderazgo" },
