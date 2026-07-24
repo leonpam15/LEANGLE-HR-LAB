@@ -270,24 +270,8 @@ function ScoreBar({label,value,max,color}) {
   );
 }
 
-function LangToggle({lang, setLang}) {
-  return (
-    <button onClick={()=>setLang(lang==="en"?"es":"en")} style={{
-      background:"none",border:`1px solid ${B.border}`,borderRadius:99,
-      padding:"4px 12px",color:B.silver,fontSize:12,cursor:"pointer",
-      fontFamily:"system-ui",display:"flex",alignItems:"center",gap:6,
-      transition:"all 0.2s",
-    }}
-      onMouseEnter={e=>{e.currentTarget.style.borderColor=B.gold;e.currentTarget.style.color=B.gold;}}
-      onMouseLeave={e=>{e.currentTarget.style.borderColor=B.border;e.currentTarget.style.color=B.silver;}}
-    >
-      {lang==="en" ? "🇪🇸 ES" : "🇬🇧 EN"}
-    </button>
-  );
-}
 
 export default function App() {
-  const [lang, setLang] = useState("en");
   const [screen, setScreen] = useState("home");
   const [activeQuiz, setActiveQuiz] = useState(null);
   const [qIndex, setQIndex] = useState(0);
@@ -353,7 +337,6 @@ export default function App() {
       <div style={{borderBottom:`1px solid ${B.border}`,padding:"20px 24px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
         <div style={{width:60}}/>
         <Logo size={1.1}/>
-        <LangToggle lang={lang} setLang={setLang}/>
       </div>
       <div style={{padding:"48px 24px 32px",textAlign:"center",maxWidth:620,margin:"0 auto"}}>
         <div style={{display:"inline-block",background:`${B.gold}22`,border:`1px solid ${B.gold}55`,borderRadius:99,padding:"6px 18px",marginBottom:20}}>
@@ -396,7 +379,6 @@ export default function App() {
           <Logo size={0.6}/>
           <div style={{display:"flex",alignItems:"center",gap:12}}>
             <span style={{fontSize:12,color:B.muted}}>{qIndex+1}/{activeQuiz.questions.length}</span>
-            <LangToggle lang={lang} setLang={setLang}/>
           </div>
         </div>
         <div style={{height:3,background:B.border}}>
@@ -453,7 +435,6 @@ export default function App() {
         <div style={{padding:"14px 20px",borderBottom:`1px solid ${B.border}`,display:"flex",alignItems:"center",justifyContent:"space-between"}}>
           <button onClick={goHome} style={{background:"none",border:"none",color:B.muted,cursor:"pointer",fontSize:13}}>{tx.allQuizzes}</button>
           <Logo size={0.6}/>
-          <LangToggle lang={lang} setLang={setLang}/>
         </div>
         <div style={{maxWidth:540,margin:"0 auto",padding:"20px 16px 60px"}}>
           <div style={{background:B.navyL,border:`1px solid ${B.gold}55`,borderRadius:18,padding:"28px 22px",marginBottom:14,textAlign:"center"}}>
