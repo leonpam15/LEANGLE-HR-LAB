@@ -1,9 +1,9 @@
 // pages/api/stripe-webhook.js
 import Stripe from 'stripe';
 import { buffer } from 'micro';
-import { generateReport } from '../lib/report';
-import { sendReportEmail } from '../lib/email';
-import { generatePDF } from '../lib/pdf';
+import { generateReport } from '../../lib/report';
+import { sendReportEmail } from '../../lib/email';
+import { generatePDF } from '../../lib/pdf';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 const processedSessions = new Set();

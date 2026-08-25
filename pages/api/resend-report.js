@@ -1,8 +1,8 @@
 // pages/api/resend-report.js
 import Stripe from 'stripe';
-import { generateReport } from '../lib/report';
-import { sendReportEmail } from '../lib/email';
-import { generatePDF } from '../lib/pdf';
+import { generateReport } from '../../lib/report';
+import { sendReportEmail } from '../../lib/email';
+import { generatePDF } from '../../lib/pdf';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
