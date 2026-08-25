@@ -48,7 +48,7 @@ export default async function handler(req, res) {
     const pdfBuffer = await generatePDF(quizTitle, primaryStyle, reportText, leaderName);
     
     console.log('Sending email...');
-    await sendReportEmail(email, quizTitle, primaryStyle, reportText, pdfBuffer, null, leaderName);
+    await sendReportEmail(email, quizTitle, primaryStyle, reportText, pdfBuffer, leaderName);
 
     console.log('Done!');
     return res.status(200).json({ success: true });
