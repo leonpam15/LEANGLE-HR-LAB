@@ -1,17 +1,18 @@
+import Stripe from 'stripe';
 import { Resend } from 'resend';
 import { generatePDF } from '../../lib/pdf';
 import { generateReport } from '../../lib/report';
 
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 const resend = new Resend(process.env.RESEND_API_KEY);
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
-  const { email } = req.body;
-  if (!email) return res.status(400).json({ error: 'Email required' });
-
   try {
+    const { email, primaryStyle: bodyStyle } = req.body;
+    if (!email) return res.status(400).json({ error: 'Email required' });
+
     const sessions = await stripe.checkout.sessions.list({ limit: 100 });
     const paidSessions = sessions.data
       .filter(s => s.customer_email?.toLowerCase() === email.toLowerCase() && s.payment_status === 'paid')
@@ -21,7 +22,9 @@ export default async function handler(req, res) {
 
     const session = paidSessions[0];
     const quizTitle = session.metadata?.quizTitle || 'Leadership Assessment';
-    const primaryStyle = session.metadata?.primaryStyle || 'Leader';
+    
+    // Allow override from request body for testing, otherwise use session metadata
+    const primaryStyle = bodyStyle || session.metadata?.primaryStyle || 'Leader';
     let leaderName = session.metadata?.leaderName;
     
     if (!leaderName || leaderName.trim() === '' || leaderName.includes('@')) {
@@ -63,20 +66,18 @@ export default async function handler(req, res) {
   </div>
 
   <div class="content">
-    <p>Hello ${leaderName},</p>
-    <p>Congratulations! Your comprehensive leadership assessment report is now ready for download.</p>
-    
-    <p><strong>Your Assessment Result:</strong></p>
+    <p>Dear ${leaderName},</p>
+    <p>Congratulations! Your personalized leadership assessment report is now ready. This comprehensive analysis provides deep insights into your leadership style, strengths, and growth opportunities.</p>
     <p style="text-align: center;"><span class="badge">${primaryStyle}</span></p>
-    
-    <p><strong>Your Report Includes:</strong></p>
+
+    <p><strong>Your report includes:</strong></p>
     <ul>
-      <li>Your Unique Leadership DNA</li>
-      <li>How Others Experience You</li>
+      <li>Your Leadership DNA and Core Essence</li>
+      <li>How Others Experience Your Leadership</li>
       <li>Your 3 Leadership Superpowers</li>
-      <li>Growth Areas and Derailers</li>
-      <li>Communication and Influence Style</li>
-      <li>Team Dynamics and Impact</li>
+      <li>Growth Edges and Development Areas</li>
+      <li>Communication and Influence Style Analysis</li>
+      <li>Team Dynamics and Impact Assessment</li>
       <li>Leadership Blind Spots</li>
       <li>Your Personalized 30-Day Action Plan</li>
       <li>Recommended Books for ${primaryStyle} Leaders</li>
