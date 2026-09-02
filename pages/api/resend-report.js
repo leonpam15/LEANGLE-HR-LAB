@@ -10,7 +10,7 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   try {
-    const { email, primaryStyle: bodyStyle } = req.body;
+    const { email, primaryStyle: bodyStyle, leaderName: bodyName } = req.body;
     if (!email) return res.status(400).json({ error: 'Email required' });
 
     const sessions = await stripe.checkout.sessions.list({ limit: 100 });
@@ -25,7 +25,7 @@ export default async function handler(req, res) {
     
     // Allow override from request body for testing, otherwise use session metadata
     const primaryStyle = bodyStyle || session.metadata?.primaryStyle || 'Leader';
-    let leaderName = session.metadata?.leaderName;
+    let leaderName = bodyName || session.metadata?.leaderName;
     
     if (!leaderName || leaderName.trim() === '' || leaderName.includes('@')) {
       leaderName = 'Leader';
@@ -39,7 +39,7 @@ export default async function handler(req, res) {
     await resend.emails.send({
       from: 'LEANGLE HR LAB <noreply@leanglehrlab.com>',
       to: email,
-      subject: `Your ${primaryStyle} Leadership Assessment Report is Ready`,
+      subject: `Your ${primaryStyle} Leadership Assessment Report is Ready, ${leaderName}`,
       html: `<!DOCTYPE html>
 <html>
 <head>
@@ -53,34 +53,32 @@ export default async function handler(req, res) {
     .content h2 { color: #2C5F82; margin-top: 0; }
     .content ul { margin: 15px 0; padding-left: 20px; }
     .content li { margin: 8px 0; }
-    .cta { background: #C9A84C; color: white; padding: 15px; border-radius: 6px; text-align: center; margin: 20px 0; }
-    .cta a { color: white; text-decoration: none; font-weight: bold; }
-    .footer { text-align: center; font-size: 12px; color: #999; margin-top: 30px; border-top: 1px solid #ddd; padding-top: 20px; }
     .badge { display: inline-block; background: #C9A84C; color: white; padding: 8px 15px; border-radius: 20px; font-weight: bold; margin: 10px 0; }
+    .footer { text-align: center; font-size: 12px; color: #999; margin-top: 30px; border-top: 1px solid #ddd; padding-top: 20px; }
   </style>
 </head>
 <body>
   <div class="header">
     <h1>Your Leadership Assessment is Ready</h1>
-    <p>A Personalized ${primaryStyle} Leadership Report</p>
+    <p>A Personalized ${primaryStyle} Leadership Report for ${leaderName}</p>
   </div>
 
   <div class="content">
     <p>Dear ${leaderName},</p>
-    <p>Congratulations! Your personalized leadership assessment report is now ready. This comprehensive analysis provides deep insights into your leadership style, strengths, and growth opportunities.</p>
+    <p>Congratulations! Your personalized leadership assessment report is now ready. This comprehensive analysis provides deep insights into your ${primaryStyle} leadership style, unique strengths, and personalized growth opportunities.</p>
     <p style="text-align: center;"><span class="badge">${primaryStyle}</span></p>
 
     <p><strong>Your report includes:</strong></p>
     <ul>
       <li>Your Leadership DNA and Core Essence</li>
-      <li>How Others Experience Your Leadership</li>
+      <li>How Others Experience Your ${primaryStyle} Style</li>
       <li>Your 3 Leadership Superpowers</li>
       <li>Growth Edges and Development Areas</li>
       <li>Communication and Influence Style Analysis</li>
       <li>Team Dynamics and Impact Assessment</li>
       <li>Leadership Blind Spots</li>
       <li>Your Personalized 30-Day Action Plan</li>
-      <li>Recommended Books for ${primaryStyle} Leaders</li>
+      <li>${primaryStyle}-Specific Book Recommendations</li>
     </ul>
 
     <p><strong>Next Steps:</strong></p>
@@ -90,10 +88,6 @@ export default async function handler(req, res) {
       <li>Start implementing your 30-Day Action Plan</li>
       <li>Track your progress and celebrate your wins</li>
     </ol>
-
-    <p style="background: #E8E0D0; padding: 15px; border-left: 4px solid #C9A84C; border-radius: 4px;">
-      <strong>Pro Tip:</strong> Reference your blind spots and growth edges regularly. The most powerful transformations happen when we're aware of what we don't see about ourselves.
-    </p>
   </div>
 
   <div class="content" style="text-align: center;">
